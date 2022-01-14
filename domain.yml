@@ -169,10 +169,10 @@ responses:
   - text: "http://ide.ucuenca.edu.ec/ide/visor/?id=4&zoom=7&lat=-280976.56919006&lon=-8831530.3683235&baseLay=OpenStreetMap&layers=CB003_AEROPUERTOS_PROJECT,MB000_PUNTOSISMICOAGOSTO2009,MB000_PUNTOSISMICOJULIO,MB000_PUNTOSISMICOMAYO,MB000_SEPTIEMBRE_DICIEMBRE2009"
 
   utter_visor_inundaciones:
-  - text: "http://localhost:4200/?context=igm_hidrologia&zoom=12&center=-79.981,-2.12527&visiblelayers=*&invisiblelayers=8a5e67d8811677043432c8348b4ca6fc,fond_osm_hot"
+  - text: "http://localhost:4200/?context=inundaciones&zoom=11&center=-79.90998,-2.18982&invisiblelayers=*&visiblelayers=hoverFeatureId,2549d44caa8828387acda8952e9885b2,fond_osm"
 
   utter_visor_deslizamiento:
-  - text: "http://localhost:4200/?context=igm_geopedologia&zoom=12&center=-78.53525,-0.18077&visiblelayers=*&invisiblelayers=a24677c2b5530b3e04f38f091dfae324,fond_osm_hot"
+  - text: "http://localhost:4200/?context=movimientos_masa&zoom=12&center=-78.5381,-0.20868&invisiblelayers=*&visiblelayers=hoverFeatureId,5d3daf2a4497b3c66512081a4d0fc806,fond_osm"
 
   utter_visor_volcanes:
   - text: "http://localhost:4200/?context=_default&zoom=12&center=-79.95687,-2.17561&visiblelayers=*&invisiblelayers=fond_osm_hot"
@@ -180,16 +180,19 @@ responses:
   
   
   utter_desli_guaya:
-  - text: "http://localhost:4200/?context=igm_geopedologia&zoom=12&center=-79.96084,-2.16951&visiblelayers=*&invisiblelayers=a24677c2b5530b3e04f38f091dfae324,fond_osm_hot"
+  - text: "http://localhost:4200/?context=movimientos_masa&zoom=11&center=-79.90998,-2.18982&invisiblelayers=*&visiblelayers=hoverFeatureId,57d68a44ff3c100371436d02bbf5559a,fond_osm"
 
   utter_inun_quito:
-  - text: "http://localhost:4200/?context=igm_hidrologia&zoom=12&center=-78.53525,-0.18077&visiblelayers=*&invisiblelayers=8a5e67d8811677043432c8348b4ca6fc,fond_osm_hot"
+  - text: "http://localhost:4200/?context=inundaciones&zoom=12&center=-78.5381,-0.20868&invisiblelayers=*&visiblelayers=hoverFeatureId,2549d44caa8828387acda8952e9885b2,fond_osm"
 
   utter_desli_cuenca:
-  - text: "http://localhost:4200/?context=igm_geopedologia&zoom=12&center=-79.03079,-2.93476&visiblelayers=*&invisiblelayers=a24677c2b5530b3e04f38f091dfae324,fond_osm_hot"
+  - text: "http://localhost:4200/?context=movimientos_masa&zoom=13&center=-79.00704,-2.88637&invisiblelayers=*&visiblelayers=hoverFeatureId,57d68a44ff3c100371436d02bbf5559a,fond_osm"
 
   utter_inun_cuenca:
-  - text: "http://localhost:4200/?context=igm_hidrologia&zoom=13&center=-79.04298,-2.88436&visiblelayers=*&invisiblelayers=8a5e67d8811677043432c8348b4ca6fc,fond_osm_hot"
+  - text: "http://localhost:4200/?context=inundaciones&zoom=13&center=-79.00704,-2.88637&invisiblelayers=*&visiblelayers=hoverFeatureId,dc1a36c8b0f2807c4b453fa3e85429df,fond_osm"
+
+  utter_puedespedir:
+  - text: "Inundaciones en cuenca azuay"
   
 
 

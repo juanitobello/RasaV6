@@ -112,22 +112,29 @@ stories:
   steps:
   - intent: int_desli_guayaquil
   - action: utter_desli_guaya
+  - action: utter_pregunta_ayuda
+  - action: utter_puedespedir
 
 - story: story_des_cuenca
   steps:
   - intent: int_desli_cuenca
   - action: utter_desli_cuenca
+  - action: utter_pregunta_ayuda
+  - action: utter_puedespedir
 
 - story: story_inun_cuenca
   steps:
   - intent: int_inun_cuenca
   - action: utter_inun_cuenca
+  - action: utter_pregunta_ayuda
+  - action: utter_puedespedir
 
 - story: story_inun_guayaquil
   steps:
   - intent: int_inun_quito
   - action: utter_inun_quito
-
+  - action: utter_pregunta_ayuda
+  - action: utter_puedespedir
 
 
 
