@@ -1,0 +1,146 @@
+version: "2.0"
+
+stories:
+
+#- story: direcciones
+#  steps: 
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: direcciones
+#  - action: utter_emergencia
+
+
+- story: saludo_inicial
+  steps:
+  - intent: greet
+  - action: utter_bienvenida
+  - action: action_buttons_inicio
+
+- story: story_salta_instrucciones
+  steps: 
+  - intent: int_saltar
+  - action: utter_pregunta_nombre
+
+- story: story_ver_instrucciones
+  steps:
+    - intent: affirmacion
+    - action: utter_instrucciones
+    - action: utter_pregunta_nombre
+
+- story: story_nombre
+  steps:
+  - intent: int_nombre
+    entities:
+      - name: "juan"
+  - slot_was_set:
+      - name: "juan"
+  - action: action_nombre
+  - action: action_buttons
+
+
+- story: story_movimientos path
+  steps:
+  - intent: int_movimiento_de_tierra
+    entities:
+      - tipo_emergencia: "movimientos"
+  - slot_was_set:
+      - tipo_emergencia: "movimientos"
+  - action: utter_seleccion_mov
+
+
+- story: story_deslizamientos path
+  steps:
+  - intent: int_deslizamiento
+    entities:
+      - tipo_emergencia: "deslizamientos"
+  - slot_was_set:
+      - tipo_emergencia: "deslizamientos"
+  - action: utter_seleccion_des
+  - action: utter_preg_provincia
+  - intent: int_provincia
+  - action: utter_preg_ciudad
+  - intent: int_ciudad
+  - action: utter_procesando
+  - action: utter_visor_deslizamiento
+
+
+- story: story_inundaciones path
+  steps:
+  - intent: int_inundaciones
+    entities:
+      - tipo_emergencia: "inundaciones"
+  - slot_was_set:
+      - tipo_emergencia: "inundaciones"
+  - action: utter_seleccion_inu
+  - action: utter_preg_provincia
+  - intent: int_provincia
+  - action: utter_preg_ciudad
+  - intent: int_ciudad
+  - action: utter_procesando
+  - action: utter_visor_inundaciones
+
+
+- story: story_volcanes path
+  steps:
+  - intent: int_volcanes
+    entities:
+      - tipo_emergencia: "volcanes"
+  - slot_was_set:
+      - tipo_emergencia: "volcanes"
+  - action: utter_seleccion_vol
+
+
+- story: historia_prov path
+  steps:
+  - intent: int_provincia
+    entities:
+      - provincia: "azuay"
+  - action: action_provincia
+
+- story: story_mov_masa_pais
+  steps:
+  - intent: int_pais
+  - action: utter_procesando
+  - action: action_ide_ucuenca
+  - action: utter_pregunta_ayuda
+
+
+
+
+#Stoy deslizamientos en guayaquil 
+- story: story_des_guayaquil
+  steps:
+  - intent: int_desli_guayaquil
+  - action: utter_desli_guaya
+
+- story: story_des_cuenca
+  steps:
+  - intent: int_desli_cuenca
+  - action: utter_desli_cuenca
+
+- story: story_inun_cuenca
+  steps:
+  - intent: int_inun_cuenca
+  - action: utter_inun_cuenca
+
+- story: story_inun_guayaquil
+  steps:
+  - intent: int_inun_quito
+  - action: utter_inun_quito
+
+
+
+
+
+
+- story: quien_eres
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: int_saluda
+  - action: utter_saludos
+
+- story: despedida
+  steps: 
+  - intent: goodbye
+  - action: utter_goodbye

@@ -1,0 +1,23 @@
+version: "2.0"
+
+rules:
+
+# - rule: register form
+#   steps:
+#   - action: utter_saludo_inicial
+#   - intent: greet
+#   - action: nombre_form
+#   - active_loop: nombre_form
+  
+# - rule: Submit Project form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: nombre_form
+#   steps:
+#   # Form is deactivated
+#   - action: nombre_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - name_registrado: null
+#   # The actions we want to run when the form is submitted.
+#   - action: action_submitregister

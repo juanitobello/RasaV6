@@ -1,0 +1,200 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirmacion
+  - int_saltar
+  - negacion
+  - bot_challenge
+  - direcciones
+  - int_ver_mapa
+  - int_saluda
+
+  - int_nombre:
+      use_entities:
+        - name 
+
+  - int_movimiento_de_tierra
+  - int_deslizamiento
+  - int_inundaciones
+  - int_volcanes
+  - int_pais
+
+  - int_provincia:
+      use_entities:
+        - provincia
+
+  - int_ciudad:
+      use_entities:
+        - ciudad
+  - int_desli_guayaquil
+  - int_inun_quito
+  - int_desli_cuenca
+  - int_inun_cuenca
+
+entities:
+  - name
+  - provincia
+  - ciudad
+  - tipo_emergencia
+
+actions:
+  - action_hello
+  # - action_nombre_form
+  # - action_submitregister
+  - utter_saludo_inicial
+  - action_buttons
+  - action_provincia
+  - action_nombre
+  - action_ide_ucuenca
+  - action_buttons_inicio
+
+
+#forms:
+  # nombre_form:
+  #   name_registrado:
+  #   - type: from_entity
+  #     entity: name
+
+slots:
+  tipo_emergencia:
+    type: text
+  
+  name:
+    type: text
+
+
+responses:
+
+  utter_bienvenida:
+  - text: "Hola, Soy tu asistente virtual"
+  
+  utter_pregunta_nombre:
+  - text: "¿Cómo te llamas?"
+
+  utter_greet:
+  - text: "Hey Como estas?"
+
+  utter_instrucciones:
+  - text: "Este es un Asistente Virtual que te ayuda a visualizar información geográfica a través de mapas especializados con datos para la gestión de riesgos por eventos naturales, desarrollado por el grupo de investigación IDE de la Universidad de Cuenca con el apoyo del Servicio Nacional de Gestión de Riesgos y Emergencia - SNGRE."
+
+  utter_greet_nombre:
+  - text: "Hey {name} ¿Cómo te ayudo?"
+
+  utter_escoge_item:
+  - text: "Escoge un ítem para mostrar en el mapa: "
+
+  utter_seleccion_mov:
+  - text: "Ha seleccionado: Movimientos de Masa"
+
+  utter_seleccion_des:
+  - text: "Ha seleccionado: Deslizamientos"
+
+  utter_seleccion_inu:
+  - text: "Ha seleccionado: Inundaciones"
+
+  utter_seleccion_vol:
+  - text: "Ha seleccionado: Volcanes"
+
+  utter_la_prov_es:
+  - text: "Hey {entities} es la prov"
+
+
+  utter_cheer_up:
+  - text: "Aqui hay una imagen linda para ti"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+    #link: "http://localhost:4200/?context=igm_geopedologia&zoom=14&center=-78.51865,-0.22732&visiblelayers=*&invisiblelayers=a24677c2b5530b3e04f38f091dfae324,fond_osm_hot"
+
+  utter_did_that_help:
+  - text: "Puedo ayudarte en algo?"
+
+  utter_happy:
+  - text: "Perfecto!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "Soy una IA creada por JB."
+
+  utter_emergencia: 
+  - text: "¿Estás en una emergencia?"
+
+  utter_seleccion_emergencia: 
+  - text: "¿Cuál es tu emergencia?"
+
+  utter_saludos:
+  - text: "Saludos desde la Universidad de Cuenca"
+    image: "https://www.universidades.com.ec/logos/original/logo-universidad-de-cuenca.png"
+
+  utter_pregunta_ayuda:
+  - text: "¿te puedo ayudar en algo mas?"
+
+  utter_preg_deslizamiento:
+  - text: "¿Qué información necesita de Deslizamientos?"
+
+  utter_preg_movimientos:
+  - text: "¿Qué información necesita de Movimiento de tierra?"
+
+  utter_preg_inundaciones:
+  - text: "¿Qué información necesita de Inundaciones?"
+
+  utter_preg_volcanes:
+  - text: "¿Qué información necesita de Volcanes?"
+
+  utter_indi_recopilar_info:
+  - text: "Vamos a recopilar unos datos para ensenarte en el mapa"
+  
+  utter_preg_provincia:
+  - text: "¿Cuál es la provincia?"
+
+  utter_preg_parroquia:
+  - text: "¿Cuál es la parroquia?"
+
+  utter_preg_canton:
+  - text: "¿Cuál es el cantón?"
+
+  utter_preg_ciudad:
+  - text: "¿Cúal es la ciudad?"
+
+  utter_procesando:
+  - text: "Procesando..."
+
+  utter_saludo_form:
+  - text: "Deseas registrarte?"
+
+
+  utter_visor_Movimientos: 
+  - text: "http://ide.ucuenca.edu.ec/ide/visor/?id=4&zoom=7&lat=-280976.56919006&lon=-8831530.3683235&baseLay=OpenStreetMap&layers=CB003_AEROPUERTOS_PROJECT,MB000_PUNTOSISMICOAGOSTO2009,MB000_PUNTOSISMICOJULIO,MB000_PUNTOSISMICOMAYO,MB000_SEPTIEMBRE_DICIEMBRE2009"
+
+  utter_visor_inundaciones:
+  - text: "http://localhost:4200/?context=igm_hidrologia&zoom=12&center=-79.981,-2.12527&visiblelayers=*&invisiblelayers=8a5e67d8811677043432c8348b4ca6fc,fond_osm_hot"
+
+  utter_visor_deslizamiento:
+  - text: "http://localhost:4200/?context=igm_geopedologia&zoom=12&center=-78.53525,-0.18077&visiblelayers=*&invisiblelayers=a24677c2b5530b3e04f38f091dfae324,fond_osm_hot"
+
+  utter_visor_volcanes:
+  - text: "http://localhost:4200/?context=_default&zoom=12&center=-79.95687,-2.17561&visiblelayers=*&invisiblelayers=fond_osm_hot"
+  
+  
+  
+  utter_desli_guaya:
+  - text: "http://localhost:4200/?context=igm_geopedologia&zoom=12&center=-79.96084,-2.16951&visiblelayers=*&invisiblelayers=a24677c2b5530b3e04f38f091dfae324,fond_osm_hot"
+
+  utter_inun_quito:
+  - text: "http://localhost:4200/?context=igm_hidrologia&zoom=12&center=-78.53525,-0.18077&visiblelayers=*&invisiblelayers=8a5e67d8811677043432c8348b4ca6fc,fond_osm_hot"
+
+  utter_desli_cuenca:
+  - text: "http://localhost:4200/?context=igm_geopedologia&zoom=12&center=-79.03079,-2.93476&visiblelayers=*&invisiblelayers=a24677c2b5530b3e04f38f091dfae324,fond_osm_hot"
+
+  utter_inun_cuenca:
+  - text: "http://localhost:4200/?context=igm_hidrologia&zoom=13&center=-79.04298,-2.88436&visiblelayers=*&invisiblelayers=8a5e67d8811677043432c8348b4ca6fc,fond_osm_hot"
+  
+
+
+
+
+session_config:
+  session_expiration_time: 1 #value en minutos
+  carry_over_slots_to_new_session: true

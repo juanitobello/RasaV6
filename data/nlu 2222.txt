@@ -1,0 +1,168 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - buenos dias
+    - hola
+    - como estas?
+    - buenas noches
+    - buenos dias
+    - buenas tardes
+    - que tal
+
+- intent: goodbye
+  examples: |
+    - hasta luego
+    - adios
+    - bye
+    - nos vemos
+
+- intent: affirmacion
+  examples: |
+    - yes
+    - si
+    - ok
+    - claro
+    - esta bien 
+    - s
+    
+
+- intent: negacion
+  examples: |
+    - no
+    - n
+    - nunca
+    - eso no
+    - negativo
+
+
+- intent: final_great
+  examples: |
+    - gracias
+    - perfecto
+    - grandioso
+    - muy bien 
+    - super bien
+    - correcto
+
+- intent: bot_challenge
+  examples: |
+    - eres un robot?
+    - eres un humano?
+    - quien eres?
+    - con quien hablo?
+
+- intent: direcciones
+  examples: | 
+    - muestrame la direccion de 
+    - quiero saber por donde ir a 
+    - direccion de 
+    - ruta de 
+    - por donde ir
+    - calles de
+
+
+#Intencion de nombre
+
+- intent: int_nombre
+  examples: | 
+    - mi nombre es [Juan]{"entity": "name", "value": "Juan"}
+    - mi nombre es [Francisco]{"entity": "name", "value": "Francisco"}
+    - mi nombre es [Marcelo]{"entity": "name", "value": "Marcelo"}
+    - mi nombre es [Daniela]{"entity": "name", "value": "Daniela"}
+    - soy [Daniela]{"entity": "name", "value": "Daniela"}
+    - [Daniela]{"entity": "name", "value": "Daniela"}
+    - me llamo [Daniela]{"entity": "name", "value": "Daniela"}
+
+#inteciones de identificacion de los 4 problemas
+
+- intent: int_movimiento_de_tierra
+  examples: |
+    - moviemienrto de tierra 
+    - temblor 
+    - hubo temblor 
+    - mapas de temblor en 
+    - muetrame mapa de temblor 
+    
+- intent: int_deslizamiento
+  examples: |
+    - hubo deslave 
+    - se cayo la montana
+    - se tapo la carretera 
+    - deslava
+    - deslizamiento de tierra 
+    - hubo un deslizamiento de tierra
+    - hubo un deslave 
+    - deslizamientos
+
+- intent: int_inundaciones
+  examples: | 
+    - hubo inundacion
+    - se inundo 
+    - inundaciones
+    - se mojo 
+    - hubo una inundacion 
+    - se inundo en 
+    - se esta inundado 
+
+- intent: int_volcanes
+  examples: |
+    - volcan
+    - hubo erupcion 
+    - volcanes
+    - ceniza 
+    - erupciono 
+    - mucha ceniza 
+    - hay ceniza 
+    - esta saliendo ceniza 
+    - cayo ceniza es
+
+#Intenciones de preguntas de ayuda
+
+#- intent: necesita_ayuda
+#  examples: | 
+#    - necesito ayuda
+#    - ayudeme por favor
+#    - como hago
+#    - como puedo 
+#    - por donde
+
+
+#intenciones de ubicacion
+
+- intent: int_provincia
+  examples: |
+    - la provincia es [azuay]{"entity": "provincia", "value": "azuay"}
+    - [azuay]{"entity": "provincia", "value": "azuay"}
+    - vivo la provincia [azuay]{"entity": "provincia", "value": "azuay"}
+    - [azuay]{"entity": "provincia", "value": "azuay"} es la provincia
+
+#- intent: int_parroquia
+#  examples: |
+#    - [cuenca]{"entity": "parroquia", "value": "cuenca"}
+#    - la parroquia es [cuenca]{"entity": "parroquia", "value": "cuenca"}
+#    - vivo la parroquia [cuenca]{"entity": "parroquia", "value": "cuenca"}
+#    - [cuenca]{"entity": "parroquia", "value": "cuenca"} es la parroquia
+
+ 
+#- intent: int_canton
+ # examples: |
+  #  - [cuenca]{"entity": "canton", "value": "cuenca"}
+   # - la canton es [cuenca]{"entity": "canton", "value": "cuenca"}
+    #- vivo la canton [cuenca]{"entity": "canton", "value": "cuenca"}
+    #- [cuenca]{"entity": "canton", "value": "cuenca"} es el canton
+
+
+- intent: int_ciudad
+  examples: |
+    - [cuenca]{"entity": "ciudad", "value": "cuenca"}
+    - la ciudad es [cuenca]{"entity": "ciudad", "value": "cuenca"}
+    - vivo en la ciudad de [cuenca]{"entity": "ciudad", "value": "cuenca"}
+    - [cuenca]{"entity": "ciudad", "value": "cuenca"} es la ciudad
+
+
+
+
+
+

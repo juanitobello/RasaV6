@@ -1,0 +1,188 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - buenos dias
+    - hola
+    - como estas?
+    - buenas noches
+    - buenos dias
+    - buenas tardes
+    - que tal
+
+- intent: goodbye
+  examples: |
+    - hasta luego
+    - adios
+    - bye
+    - nos vemos
+
+- intent: affirmacion
+  examples: |
+    - yes
+    - si
+    - ok
+    - s
+
+- intent: int_saltar
+  examples: |
+    - saltar
+    - saltar instrucciones
+    
+
+- intent: negacion
+  examples: |
+    - no
+    - n
+    - eso no
+    - negativo
+
+- intent: bot_challenge
+  examples: |
+    - eres un robot?
+    - eres un humano?
+    - quien eres?
+    - con quien hablo?
+    
+- intent: int_saluda
+  examples: |
+    - saluda
+
+- intent: direcciones
+  examples: | 
+    - muestrame la direccion de 
+    - quiero saber por donde ir a 
+    - direccion de 
+    - ruta de 
+    - por donde ir
+    - calles de
+  
+- intent: int_ver_mapa
+  examples: |
+    - quiero ver el mapa
+    - muestrame el mapa
+
+
+#Intencion de nombre
+
+- intent: int_nombre
+  examples: | 
+    - mi nombre es [juan]{"entity": "name"}
+    - me llamo [juan]{"entity": "name"}
+    - me llamo [juan](name)
+# - mi nombre es [Francisco]{"entity": "name", "value": "Francisco"}
+# - mi nombre es [Marcelo]{"entity": "name", "value": "Marcelo"}
+# - mi nombre es [Daniela]{"entity": "name", "value": "Daniela"}
+# - soy [Daniela]{"entity": "name", "value": "Daniela"}
+# - [Daniela]{"entity": "name", "value": "Daniela"}
+
+
+#inteciones de identificacion de los 4 problemas
+
+- intent: int_movimiento_de_tierra
+  examples: |
+    - [moviemiento de masa]{"entity": "tipo_emergencia"}
+    - [moviemiento de masa]{"entity": "tipo_emergencia"}
+    - hubo [moviemiento de masa]{"entity": "tipo_emergencia"}
+    - mapas de [moviemiento de masa]{"entity": "tipo_emergencia"}
+    - muetrame mapa de [moviemiento de masa]{"entity": "tipo_emergencia"}
+    
+- intent: int_deslizamiento
+  examples: |
+    - hubo [deslave]{"entity": "tipo_emergencia"}
+    - [deslave]{"entity": "tipo_emergencia"}
+    - [deslizamiento de tierra]{"entity": "tipo_emergencia"}
+    - hubo un [deslizamiento de tierra]{"entity": "tipo_emergencia"}
+    - hubo un [deslave]{"entity": "tipo_emergencia"}
+    - [deslizamientos]{"entity": "tipo_emergencia"}
+    - mapas de [deslizamientos]{"entity": "tipo_emergencia"}
+
+- intent: int_inundaciones
+  examples: | 
+    - hubo [inundacion]{"entity": "tipo_emergencia"}
+    - se [inundo]{"entity": "tipo_emergencia"}
+    - [inundaciones]{"entity": "tipo_emergencia"}
+    - se [inundo]{"entity": "tipo_emergencia"}
+    - mapas de [inundaciones]{"entity": "tipo_emergencia"}
+
+- intent: int_volcanes
+  examples: |
+    - [volcan]
+    - hubo [erupcion]{"entity": "tipo_emergencia"}
+    - [volcanes]{"entity": "tipo_emergencia"}
+    - mapas de [volcanes]{"entity": "tipo_emergencia"}
+
+#Intenciones de preguntas de ayuda
+
+#- intent: necesita_ayuda
+#  examples: | 
+#    - necesito ayuda
+#    - ayudeme por favor
+#    - como hago
+#    - como puedo 
+#    - por donde
+
+
+#intenciones de ubicacion
+
+- intent: int_provincia
+  examples: |
+    - la provincia es [azuay]{"entity": "provincia"}
+    - [azuay]{"entity": "provincia"}
+    - vivo la provincia [azuay]{"entity": "provincia"}
+    - [azuay]{"entity": "provincia"} es la provincia
+
+#- intent: int_parroquia
+#  examples: |
+#    - [cuenca]{"entity": "parroquia", "value": "cuenca"}
+#    - la parroquia es [cuenca]{"entity": "parroquia", "value": "cuenca"}
+#    - vivo la parroquia [cuenca]{"entity": "parroquia", "value": "cuenca"}
+#    - [cuenca]{"entity": "parroquia", "value": "cuenca"} es la parroquia
+
+ 
+#- intent: int_canton
+ # examples: |
+  #  - [cuenca]{"entity": "canton", "value": "cuenca"}
+   # - la canton es [cuenca]{"entity": "canton", "value": "cuenca"}
+    #- vivo la canton [cuenca]{"entity": "canton", "value": "cuenca"}
+    #- [cuenca]{"entity": "canton", "value": "cuenca"} es el canton
+
+
+- intent: int_ciudad
+  examples: |
+    - [cuenca]{"entity": "ciudad", "value": "cuenca"}
+    - la ciudad es [cuenca]{"entity": "ciudad", "value": "cuenca"}
+    - vivo en la ciudad de [cuenca]{"entity": "ciudad", "value": "cuenca"}
+    - [cuenca]{"entity": "ciudad", "value": "cuenca"} es la ciudad
+
+
+
+
+
+- intent: int_pais
+  examples: |
+    - muestrame el mapa de movimientos del norte del pais
+    - movimientos de masa del norte del pais
+    - movimientos de masa del norte del Ecuador
+    - muestrame los moviientos en masa del norte del pais.
+
+- intent: int_desli_guayaquil
+  examples: |
+    - deslizamientos guayas guayaquil
+    - deslizamientos en guayaquil 
+
+- intent: int_inun_quito
+  examples: |
+    - inundaciones en pichincha quito
+    - inundaciones en quito
+
+- intent: int_desli_cuenca
+  examples: |
+    - deslizamientos en cuenca azuay
+    - deslizamientos en cuenca
+
+- intent: int_inun_cuenca
+  examples: |
+    - inundaciones en cuenca azuay
+    - inundaciones en cuenca

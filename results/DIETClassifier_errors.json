@@ -1,0 +1,86 @@
+[
+  {
+    "text": "cuenca",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "cuenca",
+        "entity": "parroquia"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "canton",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.6407355666160583,
+        "value": "cuenca",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "la parroquia es cuenca",
+    "entities": [
+      {
+        "start": 16,
+        "end": 22,
+        "value": "cuenca",
+        "entity": "parroquia"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "canton",
+        "start": 16,
+        "end": 22,
+        "confidence_entity": 0.5064114928245544,
+        "value": "cuenca",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "vivo la parroquia cuenca",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "cuenca",
+        "entity": "parroquia"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "canton",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.5103955864906311,
+        "value": "cuenca",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "cuenca es la parroquia",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "cuenca",
+        "entity": "parroquia"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "canton",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.49850523471832275,
+        "value": "cuenca",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

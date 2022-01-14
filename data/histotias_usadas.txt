@@ -1,0 +1,83 @@
+#- story: si_esta_en_una_emergencia
+#  steps: 
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: necesita_ayuda
+#  - action: utter_seleccion_emergencia
+#  - action: utter_form_selec_emergencia
+
+#- story: no_esta_en_emergencia
+#  steps: 
+#  - intent: greet
+#  - action: utter_greet  
+#  - action: utter_emergencia 
+#  - intent: negacion
+#  - action: utter_pregunta_ayuda
+
+- story: deslizamiento
+  steps: 
+  - intent: int_deslizamiento
+  - action: utter_indi_recopilar_info
+  - action: utter_preg_provincia
+  - intent: int_provincia
+  - action: utter_preg_parroquia
+  - intent: int_parroquia
+  - action: utter_preg_canton
+  - intent: int_canton
+  - action: utter_procesando
+  - action: utter_preg_deslizamiento
+  - action: utter_visor_deslizamiento
+
+- story: movimiento
+  steps: 
+  - intent: int_ovimiento_de_tierra
+  - action: utter_indi_recopilar_info
+  - action: utter_preg_provincia
+  - intent: int_provincia
+  - action: utter_preg_parroquia
+  - intent: int_parroquia
+  - action: utter_preg_canton
+  - intent: int_canton
+  - action: utter_procesando
+  - action: utter_preg_movimientos
+  - intent: direcciones
+  - action: utter_visor_Movimientos
+
+- story: inundaciones
+  steps: 
+  - intent: int_inundaciones
+  - action: utter_indi_recopilar_info
+  - action: utter_preg_provincia
+  - intent: int_provincia
+  - action: utter_preg_parroquia
+  - intent: int_parroquia
+  - action: utter_preg_canton
+  - intent: int_canton
+  - action: utter_procesando
+  - action: utter_preg_inundaciones
+  - intent: direcciones
+  - action: utter_visor_inundaciones
+
+- story: volcanes
+  steps: 
+  - intent: int_volcanes
+  - action: utter_indi_recopilar_info
+  - action: utter_preg_provincia
+  - intent: int_provincia
+  - action: utter_preg_parroquia
+  - intent: int_parroquia
+  - action: utter_preg_canton
+  - intent: int_canton
+    entities:
+    - canton: "cuenca"
+  - action: utter_procesando
+  - action: utter_preg_volcanes
+  - intent: direcciones
+  - action: utter_visor_volcanes
+
+
+- story: despedida
+  steps: 
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: utter_saludo_form

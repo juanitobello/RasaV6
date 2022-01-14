@@ -1,0 +1,10 @@
+[
+  {
+    "text": "cuenca",
+    "intent": "int_parroquia",
+    "intent_prediction": {
+      "name": "int_canton",
+      "confidence": 0.6250827312469482
+    }
+  }
+]
