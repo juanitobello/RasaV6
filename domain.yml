@@ -43,7 +43,7 @@ actions:
   - action_hello
   # - action_nombre_form
   # - action_submitregister
-  - utter_saludo_inicial
+  - action_saludo_inicial
   - action_buttons
   - action_provincia
   - action_nombre
@@ -126,7 +126,7 @@ responses:
 
   utter_saludos:
   - text: "Saludos desde la Universidad de Cuenca"
-    image: "https://www.universidades.com.ec/logos/original/logo-universidad-de-cuenca.png"
+    image: "https://eleccionesucuenca.ec/assets/img/logo_ucuenca.png"
 
   utter_pregunta_ayuda:
   - text: "¿te puedo ayudar en algo mas?"
@@ -192,7 +192,7 @@ responses:
   - text: "http://localhost:4200/?context=inundaciones&zoom=13&center=-79.00704,-2.88637&invisiblelayers=*&visiblelayers=hoverFeatureId,dc1a36c8b0f2807c4b453fa3e85429df,fond_osm"
 
   utter_puedespedir:
-  - text: "Inundaciones en cuenca azuay"
+  - text: "Puedes pedirme algo como: Inundaciones en cuenca azuay"
   
 
 
